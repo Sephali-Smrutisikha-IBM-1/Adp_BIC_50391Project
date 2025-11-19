@@ -7,21 +7,79 @@ packages:
   gitUrl: https://github.com/Sephali-Smrutisikha-IBM-1
   gitUsername: Sephali-Smrutisikha-IBM-1
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+services:
+- serviceName: project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_ebn
+  packages:
+  - name: Adp_BIC_50391Project
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.databaseName
+  : ORCL
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.networkProtocol
+  : tcp
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbc.SAP TxStore Pool.poolThreshold: "0"
-  jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
   jdbc.SAP TxStore Pool.spyenabled: "false"
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.minimumPoolSize
+  : "1"
   jdbc.SAP TxStore Pool.useSSL: "false"
-  jdbc.SAP TxStore Pool.waitingThread: "10"
-  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.portNumber
+  : "1521"
   jdbc.SAP TxStore Pool.password: "{AES}nrGf3u7Wt20hFBGh5ZeEuQ=="
   jdbc.SAP TxStore Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP_TxStore_Pool.log;logTName=yes;timestamp=yes)
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionEnabled
+  : "false"
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.otherProperties
+  : driverType=thin;
   jdbc.SAP TxStore Pool.snoopenabled: "false"
-  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.user
+  : JDBC_BVT
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.startupRetryCount
+  : "0"
   jdbc.SAP TxStore Pool.expireTime: "60000"
   jdbc.SAP TxStore Pool.minConns: "5"
-  jdbc.SAP TxStore Pool.userid: root
   jdbc.SAP TxStore Pool.driverAlias: MySQL CC Driver
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.dbType
+  : ORACLE
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.trustStore
+  : ""
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.password
+  : "{AES}gOk3wygfWVjWqDc4SLehnQ=="
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
+  jdbc.SAP TxStore Pool.waitingThread: "10"
+  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.serverName
+  : adapter-oracle-121-on-amazonrds.cdmjexwbzoym.us-east-1.rds.amazonaws.com
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.transactionType
+  : LOCAL_TRANSACTION
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.driverType
+  : Progress® DataDirect®
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.blockingTimeout
+  : "1000"
+  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.poolIncrementSize
+  : "1"
+  jdbc.SAP TxStore Pool.userid: root
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.keyStore
+  : ""
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.Adp_BIC_50391Project.project.adp_bic_50391.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_ebn.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.oracle.OracleDataSource
